@@ -14,9 +14,33 @@
         <!-- CSS Style Costumed -->
         <link rel="stylesheet" href="css/style.css">
         <!-- Script -->
-        <script src="script.js" defer></script> 
+        <script src="js/script.js" defer></script> 
     </head>
     <body>
-
+        <div class="container text-center">
+            <h1 class="text-light">Count Down</h1>
+            <div class="row g-2 justify-content-center mt-4">
+              <div class="col-6">
+                <div  class="p-3 bg-warning">Actual Date:
+                    <div id="actualDate"></div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div  class="p-3 bg-warning">Date to Arrive:
+                    <input id="dateToArrive" type="date">
+                </div>
+              </div>
+              <div class="col-6">
+                <div id="distanceDate" class="p-3 bg-success text-light fw-bold fs-2">Distance Date</div>
+              </div>
+            </div>
+            <div class="p-3 bg-blue mt-2">
+                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    <button id="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV" type="button" class="btn btn-success">Start</button>
+                    <button type="button" class="btn btn-danger">Stop </button>
+                    </div>
+            </div>
+        </div>
     </body>
+    
 </html>

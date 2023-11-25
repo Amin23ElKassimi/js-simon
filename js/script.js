@@ -21,3 +21,46 @@
 
 
 
+// Dom Elements
+const actualDate = document.querySelector('#actualDate');
+const inDateToArrive = document.querySelector('#dateToArrive');
+const distanceDate = document.querySelector('#distanceDate');
+
+
+
+// Set the date we're counting down to
+let countDownDate = new Date(inDateToArrive.value).getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  let now = new Date().getTime();
+  actualDate.innerHTML= new Date(now);
+
+
+
+  // Find the distance between now and the count down date
+  let distance = countDownDate - now;
+
+//   Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  distanceDate.innerHTML = `${days} - ${hours}:${minutes}:${seconds}`;
+
+}, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
